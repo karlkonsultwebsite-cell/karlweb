@@ -15,7 +15,7 @@ import {
   Exam,
   Translate,
 } from "@phosphor-icons/react";
-import { Button } from "@/components/ui/Button";
+import { EnquiryButton } from "@/components/ui/EnquiryButton";
 
 /* ---- data ---- */
 
@@ -48,10 +48,10 @@ const testPrep = [
 ];
 
 const simpleLinks = [
-  { label: "Job", href: "#insights" },
-  { label: "About Us", href: "#why-us" },
-  { label: "Blog", href: "#insights" },
-  { label: "Contact Us", href: "#counselling" },
+  { label: "Job", href: "/#insights" },
+  { label: "About Us", href: "/about" },
+  { label: "Blog", href: "/#insights" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 /* ---- cascading Study Abroad mega menu ---- */
@@ -63,7 +63,7 @@ function StudyAbroadMenu() {
 
   return (
     <div className="absolute left-0 top-full pt-3">
-      <div className="flex overflow-hidden rounded-2xl border border-emerald-100 bg-white shadow-[0_30px_70px_-30px_rgba(28,13,17,0.4)]">
+      <div className="flex overflow-hidden rounded-2xl border border-emerald-100 bg-white shadow-[0_30px_70px_-30px_rgba(21,35,63,0.4)]">
         {/* column 1 */}
         <div className="w-[230px] shrink-0 border-r border-emerald-100/70 p-2">
           {studyAbroadCols.map(({ label, Icon, hasFlyout, href }) => (
@@ -141,7 +141,7 @@ function StudyAbroadMenu() {
 function TestPrepMenu() {
   return (
     <div className="absolute left-0 top-full w-[280px] pt-3">
-      <div className="overflow-hidden rounded-2xl border border-emerald-100 bg-white p-2 shadow-[0_30px_70px_-30px_rgba(28,13,17,0.4)]">
+      <div className="overflow-hidden rounded-2xl border border-emerald-100 bg-white p-2 shadow-[0_30px_70px_-30px_rgba(21,35,63,0.4)]">
         {testPrep.map(({ label, Icon, href }) => (
           <Link
             key={label}
@@ -168,9 +168,9 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-emerald-100/70 bg-bone/85 backdrop-blur-md">
-      <nav className="mx-auto flex h-[72px] max-w-[1400px] items-center justify-between px-4 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2.5" aria-label="Karl Konsult International home">
-          <Image src="/logo.png" alt="Karl Konsult International" width={132} height={56} priority className="h-11 w-auto" />
+          <Image src="/logo.png" alt="Karl Konsult International" width={168} height={72} priority className="h-14 w-auto" />
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex">
@@ -214,7 +214,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center lg:flex">
-          <Button href="#counselling" size="md">Get in Touch</Button>
+          <EnquiryButton size="md">Get in Touch</EnquiryButton>
         </div>
 
         <button className="grid h-10 w-10 place-items-center rounded-full text-pine-800 lg:hidden" onClick={() => setOpen((v) => !v)} aria-label="Toggle menu">
@@ -262,7 +262,7 @@ export function Navbar() {
                 <Link key={l.label} href={l.href} className="rounded-xl px-3 py-3 font-medium text-pine-700" onClick={() => setOpen(false)}>{l.label}</Link>
               ))}
 
-              <Button href="#counselling" size="lg" className="mt-2 w-full">Get in Touch</Button>
+              <EnquiryButton size="lg" className="mt-2 w-full" onClick={() => setOpen(false)}>Get in Touch</EnquiryButton>
             </div>
           </motion.div>
         )}

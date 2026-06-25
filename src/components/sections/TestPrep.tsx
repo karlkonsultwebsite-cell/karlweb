@@ -26,13 +26,19 @@ const tracks = [
 
 export function TestPrep() {
   return (
-    <section id="test-prep" className="bg-pine-900 py-16 text-white lg:py-24">
-      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+    <section id="test-prep" className="relative overflow-hidden bg-pine-900 py-16 text-white lg:py-24">
+      <div className="pointer-events-none absolute -right-20 -top-24 h-96 w-96 rounded-full bg-emerald-600/30 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 left-1/4 h-80 w-80 rounded-full bg-gold-500/15 blur-3xl" />
+      <div className="dot-grid absolute right-10 bottom-10 h-32 w-48 opacity-20" />
+      <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
         <Reveal className="max-w-2xl">
-          <h2 className="font-display text-4xl font-semibold leading-[1.12] tracking-tight md:text-[3.25rem]">
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-semibold text-gold-300">
+            Test preparation
+          </span>
+          <h2 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight md:text-[3.25rem]">
             Score the band your offer needs
           </h2>
-          <p className="mt-4 text-lg text-white/70">
+          <p className="mt-4 text-lg text-white/75">
             Language prep taught by trainers who know exactly what each university and
             embassy expects.
           </p>
@@ -55,7 +61,7 @@ export function TestPrep() {
                       className="text-white/40 transition-all group-hover:text-gold-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                     />
                   </div>
-                  <h3 className="mt-5 font-display text-2xl font-bold">{t.title}</h3>
+                  <h3 className="mt-5 text-2xl font-bold">{t.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-white/70">{t.desc}</p>
                 </div>
               </Link>

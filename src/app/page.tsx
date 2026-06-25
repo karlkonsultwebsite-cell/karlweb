@@ -10,6 +10,7 @@ import { Insights } from "@/components/sections/Insights";
 import { Counselling } from "@/components/sections/Counselling";
 import { SocialLinks } from "@/components/sections/SocialLinks";
 import { Footer } from "@/components/sections/Footer";
+import { StickyActions } from "@/components/ui/StickyActions";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <SocialLinks />
       </main>
       <Footer />
+      <StickyActions />
     </>
   );
 }

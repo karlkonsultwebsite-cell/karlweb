@@ -40,8 +40,8 @@ export function Footer() {
       <div className="mx-auto max-w-[1400px] px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-4 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
-            <div className="inline-flex rounded-xl bg-white px-3 py-2">
-              <Image src="/logo.png" alt="Karl Konsult International" width={150} height={64} className="h-12 w-auto" />
+            <div className="inline-flex rounded-2xl bg-white px-5 py-3">
+              <Image src="/logo.png" alt="Karl Konsult International" width={220} height={94} className="h-[72px] w-auto" />
             </div>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/65">
               Overseas education consultants helping students reach the right university,
@@ -63,7 +63,7 @@ export function Footer() {
 
           {columns.map((col) => (
             <div key={col.title}>
-              <h3 className="font-display text-sm font-bold uppercase tracking-wide text-gold-300">
+              <h3 className="text-sm font-bold uppercase tracking-wide text-gold-300">
                 {col.title}
               </h3>
               <ul className="mt-4 space-y-3">
