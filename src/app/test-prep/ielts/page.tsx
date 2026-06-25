@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   Headphones,
   BookOpen,
@@ -95,28 +96,34 @@ export default function IELTSPage() {
               </Reveal>
             </div>
 
-            {/* band target card */}
-            <Reveal direction="left" className="relative mx-auto w-full max-w-[440px]">
-              <div className="absolute -right-6 -top-6 -z-0 h-40 w-40 blob bg-gold-300/60 blur-2xl" />
-              <div className="relative animate-floaty-slow rounded-[2.5rem] bg-white p-8 ring-4 ring-white shadow-[0_40px_80px_-32px_rgba(21,35,63,0.45)]">
-                <p className="text-sm font-semibold uppercase tracking-wide text-pine-700/55">Average band lift</p>
-                <div className="mt-3 flex items-end gap-2">
-                  <span className="font-display text-6xl font-bold text-emerald-600">+1.5</span>
-                  <span className="mb-2 text-lg font-semibold text-pine-700/70">bands</span>
+            {/* hero illustration + floating band card */}
+            <Reveal direction="left" className="relative mx-auto w-full max-w-[520px]">
+              <div className="absolute -right-6 -top-6 -z-0 h-44 w-44 blob bg-gold-300/60 blur-2xl" />
+              <Image
+                src="/ielts-hero.png"
+                alt="Student preparing for the IELTS exam"
+                width={760}
+                height={760}
+                priority
+                className="relative w-full animate-floaty-slow drop-shadow-[0_30px_55px_rgba(21,35,63,0.28)]"
+              />
+              <div className="absolute -bottom-2 -left-2 w-[200px] rounded-[1.5rem] bg-white/95 p-5 ring-1 ring-emerald-100 shadow-[0_30px_60px_-30px_rgba(21,35,63,0.5)] backdrop-blur sm:-left-6 sm:w-[230px]">
+                <p className="text-xs font-semibold uppercase tracking-wide text-pine-700/55">Average band lift</p>
+                <div className="mt-1 flex items-end gap-1.5">
+                  <span className="font-display text-4xl font-bold text-emerald-600">+1.5</span>
+                  <span className="mb-1.5 text-sm font-semibold text-pine-700/70">bands</span>
                 </div>
-                <div className="mt-6 space-y-3">
+                <div className="mt-3 space-y-2">
                   {[
                     { l: "Listening", b: "8.0" },
-                    { l: "Reading", b: "7.5" },
                     { l: "Writing", b: "7.0" },
-                    { l: "Speaking", b: "7.5" },
                   ].map((r) => (
                     <div key={r.l}>
-                      <div className="flex justify-between text-sm font-semibold text-pine-800">
+                      <div className="flex justify-between text-xs font-semibold text-pine-800">
                         <span>{r.l}</span>
                         <span className="text-emerald-600">{r.b}</span>
                       </div>
-                      <div className="mt-1 h-2 overflow-hidden rounded-full bg-emerald-50">
+                      <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-emerald-50">
                         <div className="h-full rounded-full bg-emerald-500" style={{ width: `${(parseFloat(r.b) / 9) * 100}%` }} />
                       </div>
                     </div>

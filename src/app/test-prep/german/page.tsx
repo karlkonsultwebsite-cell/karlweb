@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   Sparkle,
   ArrowRight,
@@ -86,25 +87,28 @@ export default function GermanPage() {
               </Reveal>
             </div>
 
-            {/* greeting card */}
-            <Reveal direction="left" className="relative mx-auto w-full max-w-[440px]">
-              <div className="absolute -right-6 -top-6 -z-0 h-40 w-40 blob bg-emerald-200/60 blur-2xl" />
-              <div className="relative animate-floaty-slow rounded-[2.5rem] bg-white p-8 ring-4 ring-white shadow-[0_40px_80px_-32px_rgba(21,35,63,0.45)]">
-                <span className="grid h-14 w-14 place-items-center rounded-2xl bg-gold-400/20 text-gold-500">
-                  <ChatsCircle size={28} weight="fill" />
+            {/* hero illustration + floating greeting flashcards */}
+            <Reveal direction="left" className="relative mx-auto w-full max-w-[520px]">
+              <div className="absolute -right-6 -top-6 -z-0 h-44 w-44 blob bg-emerald-200/60 blur-2xl" />
+              <Image
+                src="/german-hero.png"
+                alt="Student learning German, waving Hallo"
+                width={760}
+                height={760}
+                priority
+                className="relative w-full animate-floaty-slow drop-shadow-[0_30px_55px_rgba(21,35,63,0.28)]"
+              />
+              <div className="absolute -left-2 top-6 rounded-2xl bg-white/95 px-4 py-3 ring-1 ring-gold-300/40 shadow-[0_20px_45px_-25px_rgba(21,35,63,0.5)] backdrop-blur sm:-left-5">
+                <p className="font-display text-lg font-bold text-pine-900">Hallo!</p>
+                <p className="text-xs text-pine-700/60">Hello!</p>
+              </div>
+              <div className="absolute -bottom-1 -right-1 flex items-center gap-2.5 rounded-2xl bg-white/95 px-4 py-3 ring-1 ring-gold-300/40 shadow-[0_20px_45px_-25px_rgba(21,35,63,0.5)] backdrop-blur sm:-right-3">
+                <span className="grid h-9 w-9 place-items-center rounded-xl bg-gold-400/20 text-gold-500">
+                  <ChatsCircle size={20} weight="fill" />
                 </span>
-                <div className="mt-5 space-y-3">
-                  {[
-                    { de: "Hallo!", en: "Hello!" },
-                    { de: "Wie geht's?", en: "How are you?" },
-                    { de: "Ich lerne Deutsch.", en: "I'm learning German." },
-                    { de: "Bis bald!", en: "See you soon!" },
-                  ].map((p) => (
-                    <div key={p.de} className="rounded-2xl bg-bone p-4">
-                      <p className="font-display text-lg font-bold text-pine-900">{p.de}</p>
-                      <p className="text-sm text-pine-700/60">{p.en}</p>
-                    </div>
-                  ))}
+                <div>
+                  <p className="font-display text-base font-bold text-pine-900">Ich lerne Deutsch</p>
+                  <p className="text-xs text-pine-700/60">I&apos;m learning German</p>
                 </div>
               </div>
             </Reveal>

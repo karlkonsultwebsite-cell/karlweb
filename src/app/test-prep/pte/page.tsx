@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   Sparkle,
   ArrowRight,
@@ -89,31 +90,27 @@ export default function PTEPage() {
               </Reveal>
             </div>
 
-            {/* score speed card */}
-            <Reveal direction="left" className="relative mx-auto w-full max-w-[440px]">
-              <div className="absolute -left-6 -top-6 -z-0 h-40 w-40 blob bg-coral-300/60 blur-2xl" />
-              <div className="relative animate-floaty-slow rounded-[2.5rem] bg-pine-900 p-8 text-white ring-4 ring-white shadow-[0_40px_80px_-32px_rgba(21,35,63,0.5)]">
-                <div className="flex items-center gap-2 text-coral-300">
-                  <ClockCountdown size={22} weight="fill" />
-                  <span className="text-sm font-semibold uppercase tracking-wide">Typical result time</span>
+            {/* hero illustration + floating result-speed card */}
+            <Reveal direction="left" className="relative mx-auto w-full max-w-[520px]">
+              <div className="absolute -left-6 -top-6 -z-0 h-44 w-44 blob bg-coral-300/60 blur-2xl" />
+              <Image
+                src="/pte-hero.png"
+                alt="Student taking the computer-based PTE Academic test"
+                width={760}
+                height={760}
+                priority
+                className="relative w-full animate-floaty-slow drop-shadow-[0_30px_55px_rgba(21,35,63,0.28)]"
+              />
+              <div className="absolute -bottom-2 -right-2 rounded-[1.5rem] bg-pine-900 p-5 text-white shadow-[0_30px_60px_-30px_rgba(21,35,63,0.6)] ring-4 ring-white sm:-right-4">
+                <div className="flex items-center gap-1.5 text-coral-300">
+                  <ClockCountdown size={18} weight="fill" />
+                  <span className="text-[11px] font-semibold uppercase tracking-wide">Result time</span>
                 </div>
-                <div className="mt-3 flex items-end gap-2">
-                  <span className="font-display text-6xl font-bold text-white">48</span>
-                  <span className="mb-2 text-lg font-semibold text-white/60">hours</span>
+                <div className="mt-1 flex items-end gap-1.5">
+                  <span className="font-display text-4xl font-bold text-white">48</span>
+                  <span className="mb-1.5 text-sm font-semibold text-white/60">hours</span>
                 </div>
-                <div className="mt-6 grid grid-cols-2 gap-3">
-                  {[
-                    { l: "Test length", v: "2 hrs" },
-                    { l: "Sections", v: "3" },
-                    { l: "Score range", v: "10-90" },
-                    { l: "Validity", v: "2 yrs" },
-                  ].map((s) => (
-                    <div key={s.l} className="rounded-2xl bg-white/[0.06] p-4">
-                      <p className="font-display text-xl font-bold text-coral-300">{s.v}</p>
-                      <p className="mt-0.5 text-xs text-white/55">{s.l}</p>
-                    </div>
-                  ))}
-                </div>
+                <p className="mt-1 text-xs text-white/55">Scores in 2 days, not weeks</p>
               </div>
             </Reveal>
           </div>
