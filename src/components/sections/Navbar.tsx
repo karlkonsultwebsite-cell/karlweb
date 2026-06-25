@@ -42,9 +42,9 @@ const studyAbroadCols: Col1[] = [
 ];
 
 const testPrep = [
-  { label: "IELTS", Icon: Exam, href: "#test-prep" },
-  { label: "PTE", Icon: Exam, href: "#test-prep" },
-  { label: "German Language", Icon: Translate, href: "#test-prep" },
+  { label: "IELTS", Icon: Exam, href: "/test-prep/ielts" },
+  { label: "PTE", Icon: Exam, href: "/test-prep/pte" },
+  { label: "German Language", Icon: Translate, href: "/test-prep/german" },
 ];
 
 const simpleLinks = [
