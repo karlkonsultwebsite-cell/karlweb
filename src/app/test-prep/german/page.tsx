@@ -4,11 +4,12 @@ import {
   Sparkle,
   ArrowRight,
   CheckCircle,
-  Translate,
   ChatsCircle,
   Bank,
   GraduationCap,
   Briefcase,
+  FlagBanner,
+  Confetti,
 } from "@phosphor-icons/react/dist/ssr";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
@@ -18,30 +19,30 @@ import { EnquiryButton } from "@/components/ui/EnquiryButton";
 import { Cloud } from "@/components/ui/Decor";
 import { Faq } from "@/components/ui/Faq";
 
-const faqs = [
-  { q: "Which level do I need for Germany?", a: "Most German-taught degrees and blocked-account pathways expect B1 to B2. English-taught programmes may need only A1 to A2. We map it to your exact university." },
-  { q: "How long to reach B1?", a: "From zero, roughly A1 (8 wks) + A2 (8 wks) + B1 (10 wks). Intensive batches can compress this if you have a deadline." },
-  { q: "Are classes Goethe-aligned?", a: "Yes. Our curriculum follows the Goethe-Institut framework so you are ready for recognised certification exams." },
-  { q: "Online or in person?", a: "Both. We run live online and in-centre batches with the same trainers and material." },
-];
-
 export const metadata: Metadata = {
   title: "German Language Classes | Karl Konsult International",
   description:
-    "Goethe-aligned German classes from A1 to C1 for university admission, blocked-account and work pathways in Germany.",
+    "Goethe-aligned German classes from A1 to C1 — a guided roadmap for university admission, blocked-account and work pathways in Germany.",
 };
 
-const levels = [
-  { level: "A1", title: "Beginner", desc: "Greetings, basics and everyday phrases. Where everyone starts.", weeks: "8 weeks" },
-  { level: "A2", title: "Elementary", desc: "Simple conversations, routines and short texts.", weeks: "8 weeks" },
-  { level: "B1", title: "Intermediate", desc: "The level most blocked-account and visa pathways need.", weeks: "10 weeks" },
-  { level: "B2 / C1", title: "Advanced", desc: "Fluency for German-taught degrees and skilled work.", weeks: "12 weeks" },
+const roadmap = [
+  { level: "A1", title: "Your first Hallo", desc: "Greetings, numbers, everyday phrases. You hold your first real German conversation.", weeks: "8 weeks", milestone: "Order a coffee, introduce yourself" },
+  { level: "A2", title: "Everyday German", desc: "Routines, past tense and short texts. Small talk stops feeling scary.", weeks: "8 weeks", milestone: "Handle daily errands solo" },
+  { level: "B1", title: "The visa line", desc: "The level most blocked-account and student-visa pathways ask for. A major checkpoint.", weeks: "10 weeks", milestone: "Clear most visa & admission bars", flag: true },
+  { level: "B2 / C1", title: "Degree-ready fluency", desc: "Argue, summarise and study in German. Ready for German-taught degrees and skilled work.", weeks: "12 weeks", milestone: "Study or work fully in German" },
 ];
 
 const why = [
-  { Icon: GraduationCap, title: "University admission", desc: "Many German-taught programmes need B1 to B2 proof." },
-  { Icon: Bank, title: "Blocked account & visa", desc: "Language readiness strengthens your student-visa file." },
-  { Icon: Briefcase, title: "Work pathways", desc: "German opens part-time jobs and post-study employment." },
+  { Icon: GraduationCap, title: "University admission", desc: "Many German-taught programmes need B1–B2 proof before they'll offer a seat." },
+  { Icon: Bank, title: "Blocked account & visa", desc: "Language readiness visibly strengthens your student-visa file at the consulate." },
+  { Icon: Briefcase, title: "Work pathways", desc: "German unlocks part-time jobs, internships and post-study employment." },
+];
+
+const faqs = [
+  { q: "Which level do I need for Germany?", a: "Most German-taught degrees and blocked-account pathways expect B1 to B2. English-taught programmes may need only A1 to A2. We map it to your exact university." },
+  { q: "How long to reach B1?", a: "From zero, roughly A1 (8 wks) + A2 (8 wks) + B1 (10 wks). Intensive batches can compress this if you have a deadline." },
+  { q: "Are classes Goethe-aligned?", a: "Yes. Our curriculum follows the Goethe-Institut framework so you're ready for recognised certification exams." },
+  { q: "Online or in person?", a: "Both. We run live online and in-centre batches with the same trainers and material." },
 ];
 
 export default function GermanPage() {
@@ -49,7 +50,7 @@ export default function GermanPage() {
     <>
       <Navbar />
       <main>
-        {/* HERO - gold accent */}
+        {/* HERO */}
         <section className="relative overflow-hidden bg-gradient-to-b from-gold-300/35 via-gold-300/10 to-bone">
           <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
             <Cloud className="left-[7%] top-[18%] w-24 text-white animate-floaty" />
@@ -66,17 +67,17 @@ export default function GermanPage() {
                   German · A1 to C1
                 </span>
                 <h1 className="mt-6 font-display text-[2.4rem] font-bold leading-[1.04] tracking-tight text-pine-900 sm:text-5xl lg:text-[4rem]">
-                  Sprechen Sie{" "}
+                  From <em className="not-italic text-gold-500">Hallo</em> to{" "}
                   <span className="relative inline-block text-gold-500">
-                    Deutsch?
+                    Germany.
                     <svg aria-hidden viewBox="0 0 200 16" className="absolute -bottom-2 left-0 w-full text-emerald-400" preserveAspectRatio="none">
                       <path d="M3 11c48-9 140-11 194-5" stroke="currentColor" strokeWidth="6" fill="none" strokeLinecap="round" />
                     </svg>
                   </span>
                 </h1>
-                <p className="mt-6 max-w-[44ch] text-lg leading-relaxed text-pine-700">
-                  Goethe-aligned classes that take you from your first <em>Hallo</em> to the
-                  B1/B2 your German university, blocked account and visa expect.
+                <p className="mt-6 max-w-[46ch] text-lg leading-relaxed text-pine-700">
+                  A guided, Goethe-aligned roadmap that takes you from your first word to
+                  the B1/B2 your German university, blocked account and visa expect.
                 </p>
                 <div className="mt-8">
                   <EnquiryButton size="lg" className="!bg-gold-400 !text-pine-900 hover:!bg-gold-300">
@@ -115,43 +116,88 @@ export default function GermanPage() {
           </div>
         </section>
 
-        {/* CEFR LADDER */}
+        {/* SIGNATURE: A1 → C1 ROADMAP */}
         <section className="py-14 sm:py-16 lg:py-24">
-          <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-[920px] px-4 sm:px-6 lg:px-8">
             <Reveal className="mx-auto max-w-2xl text-center">
               <span className="inline-flex items-center gap-2 rounded-full bg-gold-400/20 px-4 py-1.5 text-sm font-semibold text-gold-500">
-                The level ladder
+                Your roadmap
               </span>
               <h2 className="mt-4 font-display text-[2rem] font-bold leading-[1.1] tracking-tight text-pine-900 sm:text-4xl">
-                Climb from A1 to C1, step by step
+                One path. Four checkpoints.
               </h2>
+              <p className="mx-auto mt-4 max-w-lg text-lg text-pine-700/75">
+                Each level builds on the last. We tell you exactly where on this path your
+                German plans actually need you to reach.
+              </p>
             </Reveal>
-            <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {levels.map((l, i) => (
-                <Reveal key={l.level} delay={i * 0.07}>
-                  <div className="group h-full rounded-[1.75rem] border border-gold-300/40 bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_22px_45px_-28px_rgba(212,168,95,0.5)]">
-                    <div className="flex items-center justify-between">
-                      <span className="grid h-14 w-14 place-items-center rounded-2xl bg-gold-400 font-display text-lg font-bold text-pine-900">
-                        {l.level}
+
+            {/* vertical alternating roadmap */}
+            <div className="relative mt-14">
+              {/* spine */}
+              <div className="absolute left-7 top-2 bottom-2 w-1 rounded-full bg-gradient-to-b from-gold-300 via-gold-400 to-emerald-400 sm:left-1/2 sm:-translate-x-1/2" />
+
+              <div className="space-y-10">
+                {roadmap.map((r, i) => {
+                  const left = i % 2 === 0;
+                  return (
+                    <Reveal key={r.level} delay={i * 0.05}>
+                      <div className={`relative flex items-start gap-6 sm:gap-0 ${left ? "sm:flex-row" : "sm:flex-row-reverse"}`}>
+                        {/* node */}
+                        <div className="relative z-10 flex w-14 shrink-0 justify-center sm:absolute sm:left-1/2 sm:w-auto sm:-translate-x-1/2">
+                          <span className={`grid h-14 w-14 place-items-center rounded-2xl font-display text-base font-bold shadow-[0_14px_30px_-12px_rgba(212,168,95,0.7)] ${r.flag ? "bg-emerald-500 text-white" : "bg-gold-400 text-pine-900"}`}>
+                            {r.flag ? <FlagBanner size={24} weight="fill" /> : r.level}
+                          </span>
+                        </div>
+
+                        {/* card */}
+                        <div className={`flex-1 sm:w-[calc(50%-3rem)] sm:flex-none ${left ? "sm:pr-12 sm:text-right" : "sm:ml-auto sm:pl-12"}`}>
+                          <div className="rounded-[1.75rem] bg-white p-6 ring-1 ring-gold-300/40 transition-shadow hover:shadow-[0_22px_45px_-28px_rgba(212,168,95,0.5)]">
+                            <div className={`flex items-center gap-2 ${left ? "sm:justify-end" : ""}`}>
+                              <span className="font-display text-lg font-bold text-gold-500">{r.level}</span>
+                              <span className="rounded-full bg-bone px-2.5 py-1 text-xs font-semibold text-pine-700/60">{r.weeks}</span>
+                            </div>
+                            <h3 className="mt-2 font-display text-xl font-bold text-pine-900">{r.title}</h3>
+                            <p className="mt-2 text-sm leading-relaxed text-pine-700/75">{r.desc}</p>
+                            <p className={`mt-3 inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700 ${left ? "sm:ml-auto" : ""}`}>
+                              <CheckCircle size={13} weight="fill" />
+                              {r.milestone}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </Reveal>
+                  );
+                })}
+
+                {/* finish */}
+                <Reveal delay={0.2}>
+                  <div className="relative flex items-center gap-6 sm:justify-center sm:gap-0">
+                    <div className="relative z-10 flex w-14 shrink-0 justify-center sm:absolute sm:left-1/2 sm:w-auto sm:-translate-x-1/2">
+                      <span className="grid h-14 w-14 place-items-center rounded-2xl bg-pine-900 text-gold-300 shadow-lg">
+                        <Confetti size={24} weight="fill" />
                       </span>
-                      <span className="rounded-full bg-bone px-2.5 py-1 text-xs font-semibold text-pine-700/60">{l.weeks}</span>
                     </div>
-                    <h3 className="mt-5 font-display text-xl font-bold text-pine-900">{l.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-pine-700/75">{l.desc}</p>
+                    <p className="font-display text-lg font-bold text-pine-900 sm:mt-20 sm:text-center">
+                      Koffer packen — you&apos;re ready for Germany.
+                    </p>
                   </div>
                 </Reveal>
-              ))}
+              </div>
             </div>
           </div>
         </section>
 
-        {/* WHY GERMAN */}
+        {/* WHERE GERMAN TAKES YOU */}
         <section className="bg-bone py-14 sm:py-16 lg:py-24">
           <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
             <Reveal className="mx-auto max-w-2xl text-center">
               <h2 className="font-display text-[2rem] font-bold leading-[1.1] tracking-tight text-pine-900 sm:text-4xl">
-                Why learn German with us
+                Where German actually takes you
               </h2>
+              <p className="mx-auto mt-4 max-w-xl text-lg text-pine-700/75">
+                It&apos;s not just a class — it&apos;s three doors that open at once.
+              </p>
             </Reveal>
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               {why.map((w, i) => (
@@ -171,7 +217,7 @@ export default function GermanPage() {
 
         {/* FAQ */}
         <section className="py-14 sm:py-16 lg:py-24">
-          <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-[900px] px-4 sm:px-6 lg:px-8">
             <Reveal className="mx-auto mb-10 max-w-2xl text-center">
               <span className="inline-flex items-center gap-2 rounded-full bg-gold-400/20 px-4 py-1.5 text-sm font-semibold text-gold-500">
                 Questions
