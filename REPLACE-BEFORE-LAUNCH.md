@@ -31,7 +31,10 @@ All photos use live Unsplash URLs. To swap, drop a file in `/public` and change 
 - **Partner universities** (`src/components/sections/Universities.tsx` → `partners`) —
   list your genuine partner institutions.
 - **MBBS Abroad** (`src/lib/data.ts` → `mbbsCountries`) — verify NMC/WHO recognition,
-  programme length and fee claims, and add the actual universities you place students at.
+  programme `duration`, `medium` and especially the **`feeRange`** (indicative ₹ figures
+  are placeholders) for each country. Add the actual universities you place students at.
+  These fields drive both the homepage MBBS section AND the `/mbbs-abroad` page. The page
+  also states NEET/eligibility rules and FMGE/NExT — confirm wording with your team.
 - **Stats** used across the site (5,000+ students, 98% visa success, 16 yrs, 250+
   universities, 4.9/5) — confirm these are accurate and defensible.
 - **Blog posts** (`src/components/sections/Insights.tsx`) — replace placeholder articles;

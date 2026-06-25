@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Stethoscope, CheckCircle, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { Reveal } from "@/components/ui/Reveal";
 import { EnquiryButton, EnquiryTrigger } from "@/components/ui/EnquiryButton";
@@ -43,11 +44,18 @@ export function Mbbs() {
                 </li>
               ))}
             </ul>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
               <EnquiryButton size="lg" className="!bg-coral-500 hover:!bg-coral-400">
                 Talk to an MBBS counsellor
                 <ArrowRight size={18} weight="bold" />
               </EnquiryButton>
+              <Link
+                href="/mbbs-abroad"
+                className="group inline-flex items-center gap-2 rounded-full border border-coral-300/50 bg-white px-6 py-3 text-sm font-semibold text-coral-500 transition-all hover:-translate-y-0.5 hover:border-coral-500"
+              >
+                Explore MBBS abroad
+                <ArrowRight size={16} weight="bold" className="transition-transform group-hover:translate-x-0.5" />
+              </Link>
             </div>
           </Reveal>
 

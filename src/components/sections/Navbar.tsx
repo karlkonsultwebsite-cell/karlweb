@@ -27,7 +27,7 @@ type Col1 = { label: string; Icon: typeof MapPin; hasFlyout: boolean; href: stri
 const studyAbroadCols: Col1[] = [
   { label: "Destinations", Icon: MapPin, hasFlyout: true, href: "#destinations" },
   { label: "Universities", Icon: GraduationCap, hasFlyout: true, href: "#universities" },
-  { label: "MBBS Abroad", Icon: FirstAidKit, hasFlyout: false, href: "#mbbs" },
+  { label: "MBBS Abroad", Icon: FirstAidKit, hasFlyout: false, href: "/mbbs-abroad" },
 ];
 
 const testPrep = [
@@ -42,7 +42,7 @@ const testPrep = [
 
 const simpleLinks = [
   { label: "About Us", href: "/about" },
-  { label: "MBBS Abroad", href: "/#mbbs" },
+  { label: "MBBS Abroad", href: "/mbbs-abroad" },
   { label: "Blog", href: "/#blogs" },
   { label: "Contact Us", href: "/contact" },
 ];

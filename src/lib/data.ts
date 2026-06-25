@@ -159,32 +159,52 @@ export type MbbsCountry = {
   code: string;
   blurb: string;
   highlight: string;
+  duration: string;
+  medium: string;
+  recognition: string;
+  feeRange: string; // indicative total tuition — VERIFY before launch
 };
 
 export const mbbsCountries: MbbsCountry[] = [
   {
     name: "China",
     code: "cn",
-    blurb: "English-medium MBBS at NMC-screened, WHO-listed universities.",
-    highlight: "5.5-year programme",
+    blurb: "English-medium MBBS at NMC-screened, WHO-listed universities with modern teaching hospitals.",
+    highlight: "Top choice",
+    duration: "6 years (incl. internship)",
+    medium: "English",
+    recognition: "NMC-screened · WHO / WDOMS-listed",
+    feeRange: "₹18–35 L total tuition*",
   },
   {
     name: "Russia",
     code: "ru",
-    blurb: "State medical universities with long-standing Indian-student communities.",
+    blurb: "Long-established state medical universities with large, well-supported Indian-student communities.",
     highlight: "Globally recognised",
+    duration: "6 years",
+    medium: "English",
+    recognition: "NMC-screened · WHO / WDOMS-listed",
+    feeRange: "₹20–40 L total tuition*",
   },
   {
     name: "Kazakhstan",
     code: "kz",
-    blurb: "Affordable tuition and a low cost of living for medical aspirants.",
+    blurb: "Affordable tuition and a low cost of living make it a popular, budget-friendly medical destination.",
     highlight: "Budget-friendly",
+    duration: "5 years + internship",
+    medium: "English",
+    recognition: "NMC-screened · WHO / WDOMS-listed",
+    feeRange: "₹16–28 L total tuition*",
   },
   {
     name: "Uzbekistan",
     code: "uz",
-    blurb: "Newer, fast-growing destination with modern teaching hospitals.",
+    blurb: "A newer, fast-growing destination with modern campuses and competitive, all-inclusive fees.",
     highlight: "Emerging choice",
+    duration: "5–6 years",
+    medium: "English",
+    recognition: "NMC-screened · WHO / WDOMS-listed",
+    feeRange: "₹15–25 L total tuition*",
   },
 ];
 

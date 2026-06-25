@@ -8,7 +8,7 @@ const studyLinks = destinations.map((d) => ({ label: `Study in ${d.name}`, href:
 
 const coachingLinks = [
   ...languageCourses.slice(0, 5).map((c) => ({ label: c.name, href: c.href ?? "#language-coaching" })),
-  { label: "MBBS Abroad", href: "#mbbs" },
+  { label: "MBBS Abroad", href: "/mbbs-abroad" },
 ];
 
 const exploreLinks = [
