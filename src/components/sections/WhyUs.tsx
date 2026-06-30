@@ -3,7 +3,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 const stats = [
   { value: "5,000+", label: "Students placed" },
-  { value: "16 yrs", label: "Of guidance" },
+  { value: "9", label: "Countries covered" },
   { value: "250+", label: "Partner universities" },
   { value: "98%", label: "Visa success" },
 ];

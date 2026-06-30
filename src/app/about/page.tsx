@@ -9,7 +9,6 @@ import {
   Compass,
   Quotes,
   LinkedinLogo,
-  Sparkle,
   ArrowRight,
 } from "@phosphor-icons/react/dist/ssr";
 import { Navbar } from "@/components/sections/Navbar";
@@ -22,21 +21,21 @@ import { Cloud } from "@/components/ui/Decor";
 export const metadata: Metadata = {
   title: "About Us | Karl Konsult International — Study Abroad Consultants in Jaipur",
   description:
-    "Meet Karl Konsult International, trusted overseas education consultants in Jaipur guiding students to top universities abroad since 2009 with honest, student-first support.",
+    "Meet Karl Konsult International, trusted overseas education consultants in Jaipur guiding students to top universities abroad with honest, student-first support.",
 };
 
 const stats = [
   { value: "5,000+", label: "Students placed" },
-  { value: "16 yrs", label: "Of guidance" },
+  { value: "9", label: "Countries covered" },
   { value: "250+", label: "Partner universities" },
   { value: "98%", label: "Visa success" },
 ];
 
 const timeline = [
-  { year: "2009", title: "The first office", desc: "Started in Jaipur with one counsellor and one promise: honest advice." },
-  { year: "2014", title: "1,000 students", desc: "Crossed our first thousand placements across the UK and Australia." },
-  { year: "2019", title: "Going global", desc: "Grew across Canada, Germany, Europe, the US and more." },
-  { year: "2026", title: "5,000+ and counting", desc: "A trusted team with a 98% student-visa success rate." },
+  { step: "Start", title: "One honest promise", desc: "Founded in Jaipur with one counsellor and one promise: honest advice." },
+  { step: "Grow", title: "1,000 students", desc: "Crossed our first thousand placements across the UK and Australia." },
+  { step: "Expand", title: "Going global", desc: "Grew across Canada, Germany, Europe, the US and more." },
+  { step: "Today", title: "5,000+ and counting", desc: "A trusted team with a 98% student-visa success rate." },
 ];
 
 const values = [
@@ -89,7 +88,6 @@ export default function AboutPage() {
             <div>
               <Reveal>
                 <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-emerald-700 shadow-sm ring-1 ring-emerald-100">
-                  <Sparkle size={15} weight="fill" className="text-gold-500" />
                   About Karl Konsult
                 </span>
                 <h1 className="mt-6 font-display text-[2.4rem] font-bold leading-[1.04] tracking-tight text-pine-900 sm:text-5xl lg:text-[4.25rem]">
@@ -97,7 +95,7 @@ export default function AboutPage() {
                   <br />
                   partner,{" "}
                   <span className="relative inline-block text-emerald-600">
-                    since 2009
+                    for the long run
                     <svg
                       aria-hidden
                       viewBox="0 0 220 16"
@@ -175,7 +173,7 @@ export default function AboutPage() {
                 </h2>
                 <div className="mt-5 space-y-4 text-lg leading-relaxed text-pine-700/85">
                   <p>
-                    Karl Konsult started in 2009 with one belief: studying abroad
+                    Karl Konsult started with one belief: studying abroad
                     shouldn&apos;t depend on who you know or how much jargon you can
                     decode. It should depend on a clear plan and honest advice.
                   </p>
@@ -218,7 +216,7 @@ export default function AboutPage() {
                 Our journey
               </span>
               <h2 className="mt-4 font-display text-[2rem] font-bold leading-[1.1] tracking-tight text-pine-900 sm:text-4xl">
-                Sixteen years, one direction
+                One journey, one direction
               </h2>
             </Reveal>
 
@@ -226,10 +224,10 @@ export default function AboutPage() {
               <div className="absolute left-[27px] top-0 h-full w-0.5 bg-gradient-to-b from-emerald-200 via-emerald-200 to-transparent md:left-0 md:top-[27px] md:h-0.5 md:w-full md:bg-gradient-to-r md:from-transparent md:via-emerald-200 md:to-transparent" />
               <div className="grid grid-cols-1 gap-8 md:grid-cols-4 md:gap-5">
                 {timeline.map((t, i) => (
-                  <Reveal key={t.year} delay={i * 0.08}>
+                  <Reveal key={t.step} delay={i * 0.08}>
                     <div className="group relative flex items-start gap-5 md:flex-col md:items-center md:text-center">
-                      <div className="relative z-10 grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-white font-display text-sm font-bold text-emerald-600 shadow-[0_12px_28px_-14px_rgba(21,35,63,0.5)] ring-1 ring-emerald-100 transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-emerald-600 group-hover:text-white">
-                        {t.year}
+                      <div className="relative z-10 grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-white font-display text-xs font-bold uppercase tracking-wide text-emerald-600 shadow-[0_12px_28px_-14px_rgba(21,35,63,0.5)] ring-1 ring-emerald-100 transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-emerald-600 group-hover:text-white">
+                        {t.step}
                       </div>
                       <div className="md:mt-5">
                         <h3 className="font-display text-lg font-bold text-pine-900">{t.title}</h3>

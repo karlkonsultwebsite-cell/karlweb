@@ -7,7 +7,6 @@ import {
   Star,
   CheckCircle,
   GraduationCap,
-  Sparkle,
 } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/Button";
 import { EnquiryButton } from "@/components/ui/EnquiryButton";
@@ -50,8 +49,7 @@ export function Hero() {
             {...rise(0)}
             className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-emerald-700 shadow-sm ring-1 ring-emerald-100"
           >
-            <Sparkle size={15} weight="fill" className="text-gold-500" />
-            Trusted study abroad consultants in Jaipur, since 2009
+            Trusted study abroad consultants in Jaipur
           </motion.div>
 
           <motion.h1

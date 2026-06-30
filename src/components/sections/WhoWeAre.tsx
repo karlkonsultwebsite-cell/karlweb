@@ -22,7 +22,7 @@ export function WhoWeAre() {
               Who we are
             </span>
             <h2 className="mt-4 font-display text-[2rem] font-bold leading-[1.08] tracking-tight text-pine-900 sm:text-4xl md:text-[3rem]">
-              Your study abroad partners, since 2009
+              Your trusted study abroad partners
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-pine-700/85">
               Karl Konsult International is a team of overseas education consultants in
