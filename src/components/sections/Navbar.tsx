@@ -181,7 +181,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-emerald-100/70 bg-bone/85 backdrop-blur-md">
       <nav className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2.5" aria-label="Karl Konsult International home">
-          <Image src="/logo.png" alt="Karl Konsult International" width={168} height={72} priority className="h-14 w-auto" />
+          <Image src="/logo.png" alt="Karl Konsult International" width={210} height={90} priority className="h-16 w-auto" />
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex">

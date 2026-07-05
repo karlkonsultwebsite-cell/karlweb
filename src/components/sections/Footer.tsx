@@ -63,9 +63,9 @@ export function Footer() {
             <Image
               src="/logo-white.png"
               alt="Karl Konsult International"
-              width={220}
-              height={158}
-              className="h-16 w-auto"
+              width={280}
+              height={201}
+              className="h-20 w-auto"
             />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/65">
               Trusted overseas education consultants helping students reach the right
