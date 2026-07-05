@@ -8,48 +8,27 @@ import {
   Bank,
 } from "@phosphor-icons/react/dist/ssr";
 import { Reveal } from "@/components/ui/Reveal";
+import { blogPosts } from "@/lib/blog";
 
 /**
  * Guides & insights as an editorial magazine layout: one bold featured guide,
- * then a clean categorised list. Topic + read-time encode real meaning. Themed
- * icon/gradient art per guide keeps it cohesive with the brand (no stock noise).
+ * then a clean categorised list. Pulls the real blog posts (src/lib/blog.ts) so
+ * the homepage teaser and the /blog section stay in sync. Themed icon art per
+ * guide keeps it cohesive with the brand.
  */
-const featured = {
-  category: "Visas",
-  title: "Canada SDS 2026: what actually changed for Indian students",
-  excerpt:
-    "New proof-of-funds thresholds, GIC updates and the documents that now make or break a study permit.",
-  date: "12 June 2026",
-  read: "6 min read",
-  Icon: FileText,
-};
-
-const posts = [
-  {
-    category: "Planning",
-    title: "September vs January intake: which one fits your timeline",
-    date: "4 June 2026",
-    read: "4 min read",
-    Icon: CalendarCheck,
-    tint: "bg-emerald-50 text-emerald-600",
-  },
-  {
-    category: "Applications",
-    title: "Writing an SOP that visa officers actually believe",
-    date: "27 May 2026",
-    read: "5 min read",
-    Icon: PencilLine,
-    tint: "bg-coral-400/15 text-coral-500",
-  },
-  {
-    category: "Funding",
-    title: "Germany's blocked account, explained simply",
-    date: "19 May 2026",
-    read: "3 min read",
-    Icon: Bank,
-    tint: "bg-gold-400/20 text-gold-500",
-  },
+const tints = [
+  "bg-emerald-50 text-emerald-600",
+  "bg-coral-400/15 text-coral-500",
+  "bg-gold-400/20 text-gold-500",
 ];
+const icons = [CalendarCheck, PencilLine, Bank];
+
+const featured = { ...blogPosts[0], Icon: FileText };
+const posts = blogPosts.slice(1, 4).map((p, i) => ({
+  ...p,
+  Icon: icons[i % icons.length],
+  tint: tints[i % tints.length],
+}));
 
 export function Insights() {
   return (
@@ -72,7 +51,7 @@ export function Insights() {
             </p>
           </div>
           <Link
-            href="#blogs"
+            href="/blog"
             className="group inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white px-5 py-2.5 text-sm font-semibold text-emerald-700 transition-all hover:-translate-y-0.5 hover:border-emerald-600"
           >
             View all guides
@@ -84,7 +63,7 @@ export function Insights() {
           {/* featured guide */}
           <Reveal direction="right">
             <Link
-              href="#insights"
+              href={`/blog/${featured.slug}`}
               className="group flex h-full flex-col justify-between overflow-hidden rounded-[2rem] bg-pine-900 p-8 text-white shadow-[0_30px_70px_-34px_rgba(21,35,63,0.6)] sm:p-10"
             >
               <div>
@@ -119,7 +98,7 @@ export function Insights() {
             {posts.map((p, i) => (
               <Reveal key={p.title} delay={i * 0.07} className="h-full">
                 <Link
-                  href="#insights"
+                  href={`/blog/${p.slug}`}
                   className="group flex h-full items-center gap-5 rounded-[1.5rem] border border-emerald-100 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-[0_18px_40px_-26px_rgba(21,35,63,0.5)]"
                 >
                   <span className={`grid h-14 w-14 shrink-0 place-items-center rounded-2xl ${p.tint} transition-transform duration-300 group-hover:-translate-y-0.5`}>

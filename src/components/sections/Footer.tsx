@@ -4,7 +4,7 @@ import { MapPin, Phone, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
 import { socialMeta, type SocialKey } from "@/components/ui/SocialIcons";
 import { destinations, languageCourses } from "@/lib/data";
 
-const studyLinks = destinations.map((d) => ({ label: `Study in ${d.name}`, href: "#destinations" }));
+const studyLinks = destinations.map((d) => ({ label: `Study in ${d.name}`, href: `/study-abroad/${d.slug}` }));
 
 const coachingLinks = [
   ...languageCourses.slice(0, 5).map((c) => ({ label: c.name, href: c.href ?? "#language-coaching" })),
@@ -12,25 +12,26 @@ const coachingLinks = [
 ];
 
 const exploreLinks = [
-  { label: "Intakes", href: "#destinations" },
-  { label: "Scholarships", href: "#services" },
-  { label: "Visa Success Stories", href: "#testimonials" },
-  { label: "Country Guides", href: "#blogs" },
-  { label: "Blogs", href: "#blogs" },
-  { label: "FAQ", href: "/contact" },
+  { label: "Scholarships", href: "/scholarships" },
+  { label: "Country Guides", href: "/blog" },
+  { label: "Visa Success Stories", href: "/#testimonials" },
+  { label: "Blogs", href: "/blog" },
+  { label: "Careers", href: "/careers" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 const companyLinks = [
   { label: "About Us", href: "/about" },
-  { label: "Why Karl Konsult", href: "#why-us" },
+  { label: "Why Karl Konsult", href: "/#why-us" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact Us", href: "/contact" },
 ];
 
 const legalLinks = [
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms & Conditions", href: "#" },
-  { label: "Refund Policy", href: "#" },
-  { label: "Legal", href: "#" },
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms & Conditions", href: "/terms" },
+  { label: "Refund Policy", href: "/refund" },
+  { label: "Disclaimer", href: "/disclaimer" },
 ];
 
 const footerSocials: SocialKey[] = ["instagram", "facebook", "linkedin", "youtube", "whatsapp"];
@@ -124,9 +125,9 @@ export function Footer() {
         <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-3 px-4 py-6 text-sm text-white/55 sm:flex-row sm:px-6 lg:px-8">
           <p>© 2026 Karl Konsult International. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-white">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white">Terms</Link>
-            <Link href="#" className="hover:text-white">Refund Policy</Link>
+            <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-white">Terms</Link>
+            <Link href="/refund" className="hover:text-white">Refund Policy</Link>
           </div>
         </div>
       </div>

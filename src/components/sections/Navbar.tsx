@@ -44,7 +44,8 @@ const testPrep = [
 const simpleLinks = [
   { label: "About Us", href: "/about" },
   { label: "MBBS Abroad", href: "/mbbs-abroad" },
-  { label: "Blog", href: "/#blogs" },
+  { label: "Blog", href: "/blog" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -106,7 +107,7 @@ function StudyAbroadMenu() {
             {countries.map((c) => (
               <Link
                 key={c.code}
-                href="#destinations"
+                href={`/study-abroad/${c.slug}`}
                 onMouseEnter={() => setCountry(c.name)}
                 className={`flex items-center gap-3 rounded-lg px-3 py-2 transition-colors ${
                   country === c.name ? "bg-emerald-50" : "hover:bg-emerald-50/60"
@@ -133,7 +134,7 @@ function StudyAbroadMenu() {
             {activeCountry.intakes.map((intake) => (
               <Link
                 key={intake}
-                href="#counselling"
+                href={`/study-abroad/${activeCountry.slug}`}
                 className="block rounded-lg px-3 py-2.5 text-sm font-medium text-pine-800 transition-colors hover:bg-emerald-50 hover:text-emerald-700"
               >
                 {intake}
@@ -245,7 +246,7 @@ export function Navbar() {
               {mobileSub === "study" && (
                 <div className="ml-3 flex flex-col gap-0.5">
                   {countries.map((c) => (
-                    <Link key={c.code} href="#destinations" className="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium text-pine-700" onClick={() => setOpen(false)}>
+                    <Link key={c.code} href={`/study-abroad/${c.slug}`} className="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium text-pine-700" onClick={() => setOpen(false)}>
                       <NavFlag code={c.code} className="h-[15px] w-[22px]" />
                       Study in {c.name}
                     </Link>

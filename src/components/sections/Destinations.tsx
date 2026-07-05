@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { Reveal } from "@/components/ui/Reveal";
 import { EnquiryTrigger } from "@/components/ui/EnquiryButton";
@@ -65,8 +66,9 @@ export function Destinations() {
         <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
           {/* signature tile */}
           <Reveal className="sm:col-span-2 lg:col-span-1 lg:row-span-2">
-            <EnquiryTrigger
-              ariaLabel={`Enquire about studying in ${featured.name}`}
+            <Link
+              href={`/study-abroad/${featured.slug}`}
+              aria-label={`Study in ${featured.name}`}
               className="group relative flex h-full min-h-[320px] w-full flex-col overflow-hidden rounded-[1.75rem] text-left shadow-[0_30px_70px_-34px_rgba(21,35,63,0.6)] sm:min-h-[420px] sm:rounded-[2rem]"
             >
               <Image
@@ -87,18 +89,19 @@ export function Destinations() {
                 </div>
                 <p className="mt-2 text-white/85">{featured.fact}</p>
                 <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold-300">
-                  Talk to a counsellor
+                  Explore {featured.name}
                   <ArrowUpRight size={16} weight="bold" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </span>
               </div>
-            </EnquiryTrigger>
+            </Link>
           </Reveal>
 
           {/* the rest, refined grid */}
           {rest.map((c, i) => (
             <Reveal key={c.code} delay={(i % 2) * 0.05}>
-              <EnquiryTrigger
-                ariaLabel={`Enquire about studying in ${c.name}`}
+              <Link
+                href={`/study-abroad/${c.slug}`}
+                aria-label={`Study in ${c.name}`}
                 className="group flex h-full w-full items-center gap-3 overflow-hidden rounded-[1.5rem] bg-white p-2.5 pr-4 text-left ring-1 ring-emerald-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_45px_-26px_rgba(21,35,63,0.5)] sm:gap-4 sm:p-3 sm:pr-5"
               >
                 <div className="relative h-20 w-24 shrink-0 overflow-hidden rounded-xl sm:h-24 sm:w-28 sm:rounded-2xl">
@@ -120,7 +123,7 @@ export function Destinations() {
                 <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-emerald-50 text-emerald-600 transition-colors group-hover:bg-emerald-600 group-hover:text-white sm:h-9 sm:w-9">
                   <ArrowUpRight size={15} weight="bold" />
                 </span>
-              </EnquiryTrigger>
+              </Link>
             </Reveal>
           ))}
         </div>

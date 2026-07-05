@@ -42,8 +42,20 @@ Note: the old clay illustrations `public/{hero,who_we_are,universities,ielts-her
   also states NEET/eligibility rules and FMGE/NExT — confirm wording with your team.
 - **Stats** used across the site (5,000+ students, 98% visa success, 16 yrs, 250+
   universities, 4.9/5) — confirm these are accurate and defensible.
-- **Blog posts** (`src/components/sections/Insights.tsx`) — replace placeholder articles;
-  wire "View all guides" + cards to real blog URLs. Currently the section id is `#blogs`.
+- **Blog posts** (`src/lib/blog.ts` → `blogPosts`) — the 6 sample articles are realistic
+  placeholders. Replace with the client's real posts (or wire to a CMS). They drive both
+  the homepage Insights teaser AND the `/blog` + `/blog/[slug]` pages.
+- **Country pages** (`src/lib/data.ts` → `countryDetails`) — the per-country `/study-abroad/[slug]`
+  pages use indicative **tuition, living costs, work rights, intakes, popular courses and
+  top universities**. These are realistic but must be VERIFIED against current official
+  sources before quoting to students. All figures are marked indicative on the pages.
+- **Scholarships** (`src/app/scholarships/page.tsx`) — scheme names (Chevening/DAAD/CSC/DSU)
+  are real but details change yearly; confirm before promoting specifics.
+- **Careers** (`src/app/careers/page.tsx`) — the 5 job postings are SAMPLE roles. Replace
+  with your actual openings (or remove ones you're not hiring for).
+- **Legal pages** (`/privacy`, `/terms`, `/refund`, `/disclaimer` in `src/app/`) —
+  ⚠️ **TEMPLATE TEXT ONLY. Have a lawyer review and adapt before launch.** Do not treat as
+  final legal copy.
 
 ## 3. Contact details (placeholders)
 
