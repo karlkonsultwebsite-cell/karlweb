@@ -23,7 +23,7 @@ export function LanguageCoaching() {
             <Translate size={15} weight="fill" />
             Language coaching
           </span>
-          <h2 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight md:text-[3.25rem]">
+          <h2 className="mt-4 font-display text-4xl font-bold leading-[1.14] tracking-tight md:text-[3.25rem]">
             Score the band your offer needs
           </h2>
           <p className="mt-4 text-lg text-white/75">

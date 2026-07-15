@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import {
   ArrowRight,
-  Star,
   CheckCircle,
   GraduationCap,
 } from "@phosphor-icons/react";
@@ -54,7 +53,7 @@ export function Hero() {
 
           <motion.h1
             {...rise(0.08)}
-            className="mt-6 font-display text-[2.15rem] font-bold leading-[1.06] tracking-tight text-pine-900 sm:text-5xl lg:text-[3.9rem]"
+            className="mt-6 font-display text-[2.15rem] font-bold leading-[1.14] tracking-tight text-pine-900 sm:text-5xl lg:text-[3.9rem]"
           >
             Study abroad with{" "}
             <span className="relative inline-block text-emerald-600">
@@ -62,7 +61,7 @@ export function Hero() {
               <svg
                 aria-hidden
                 viewBox="0 0 200 16"
-                className="absolute -bottom-2 left-0 w-full text-gold-400"
+                className="absolute -bottom-3 left-0 w-full text-gold-400"
                 preserveAspectRatio="none"
               >
                 <path
@@ -101,7 +100,7 @@ export function Hero() {
             </Button>
           </motion.div>
 
-          {/* trusted-by flag strip + rating */}
+          {/* trusted-by flag strip */}
           <motion.div {...rise(0.32)} className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-4">
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2">
@@ -121,17 +120,6 @@ export function Hero() {
                 ))}
               </div>
               <span className="text-sm font-semibold text-pine-700">9 study destinations</span>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <div className="flex">
-                {[0, 1, 2, 3, 4].map((i) => (
-                  <Star key={i} size={17} weight="fill" className="text-gold-400" />
-                ))}
-              </div>
-              <span className="text-sm font-semibold text-pine-700">
-                4.9/5 · 1,200+ reviews
-              </span>
             </div>
           </motion.div>
         </div>

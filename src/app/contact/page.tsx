@@ -74,14 +74,14 @@ export default function ContactPage() {
                   <Sparkle size={15} weight="fill" className="text-gold-500" />
                   Contact us
                 </span>
-                <h1 className="mt-6 font-display text-[2.4rem] font-bold leading-[1.04] tracking-tight text-pine-900 sm:text-5xl lg:text-[4rem]">
+                <h1 className="mt-6 font-display text-[2.4rem] font-bold leading-[1.14] tracking-tight text-pine-900 sm:text-5xl lg:text-[4rem]">
                   Let's plan your{" "}
                   <span className="relative inline-block text-emerald-600">
                     next step
                     <svg
                       aria-hidden
                       viewBox="0 0 220 16"
-                      className="absolute -bottom-2 left-0 w-full text-gold-400"
+                      className="absolute -bottom-3 left-0 w-full text-gold-400"
                       preserveAspectRatio="none"
                     >
                       <path d="M3 11c52-9 150-11 214-5" stroke="currentColor" strokeWidth="6" fill="none" strokeLinecap="round" />

@@ -22,7 +22,7 @@ export function Mbbs() {
               <Stethoscope size={15} weight="fill" />
               MBBS abroad
             </span>
-            <h2 className="mt-4 font-display text-[2rem] font-bold leading-[1.08] tracking-tight text-pine-900 sm:text-4xl md:text-[3rem]">
+            <h2 className="mt-4 font-display text-[2rem] font-bold leading-[1.15] tracking-tight text-pine-900 sm:text-4xl md:text-[3rem]">
               Dreaming of becoming a{" "}
               <span className="text-coral-500">doctor?</span>
             </h2>

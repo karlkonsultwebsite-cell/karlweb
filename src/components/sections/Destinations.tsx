@@ -47,7 +47,7 @@ export function Destinations() {
             <span className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-4 py-1.5 text-sm font-semibold text-emerald-700">
               Study destinations
             </span>
-            <h2 className="mt-4 font-display text-[2rem] font-bold leading-[1.08] tracking-tight text-pine-900 sm:mt-5 sm:text-4xl md:text-[3.4rem]">
+            <h2 className="mt-4 font-display text-[2rem] font-bold leading-[1.15] tracking-tight text-pine-900 sm:mt-5 sm:text-4xl md:text-[3.4rem]">
               Where do you{" "}
               <span className="text-emerald-600">want to study?</span>
             </h2>

@@ -82,11 +82,11 @@ export default function MbbsAbroadPage() {
                   <Sparkle size={15} weight="fill" className="text-gold-500" />
                   MBBS Abroad · NMC-screened universities
                 </span>
-                <h1 className="mt-6 font-display text-[2.2rem] font-bold leading-[1.05] tracking-tight text-pine-900 sm:text-5xl lg:text-[3.9rem]">
+                <h1 className="mt-6 font-display text-[2.2rem] font-bold leading-[1.14] tracking-tight text-pine-900 sm:text-5xl lg:text-[3.9rem]">
                   Become the doctor{" "}
                   <span className="relative inline-block text-coral-500">
                     you set out to be
-                    <svg aria-hidden viewBox="0 0 240 16" className="absolute -bottom-2 left-0 w-full text-gold-400" preserveAspectRatio="none">
+                    <svg aria-hidden viewBox="0 0 240 16" className="absolute -bottom-3 left-0 w-full text-gold-400" preserveAspectRatio="none">
                       <path d="M3 11c56-9 164-11 234-5" stroke="currentColor" strokeWidth="6" fill="none" strokeLinecap="round" />
                     </svg>
                   </span>

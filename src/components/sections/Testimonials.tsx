@@ -95,7 +95,7 @@ function TestimonialsBlock({
           <span className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-4 py-1.5 text-sm font-semibold text-emerald-700">
             {tag}
           </span>
-          <h2 className="mt-4 font-display text-[2rem] font-bold leading-[1.07] tracking-tight text-pine-900 sm:text-4xl md:text-[3rem]">
+          <h2 className="mt-4 font-display text-[2rem] font-bold leading-[1.15] tracking-tight text-pine-900 sm:text-4xl md:text-[3rem]">
             {heading}
           </h2>
           <p className="mt-5 max-w-xl text-lg text-pine-700/80">{sub}</p>

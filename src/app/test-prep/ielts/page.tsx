@@ -82,11 +82,11 @@ export default function IELTSPage() {
                   <Sparkle size={15} weight="fill" className="text-gold-500" />
                   IELTS · Academic & General
                 </span>
-                <h1 className="mt-6 font-display text-[2.4rem] font-bold leading-[1.04] tracking-tight text-pine-900 sm:text-5xl lg:text-[4rem]">
+                <h1 className="mt-6 font-display text-[2.4rem] font-bold leading-[1.14] tracking-tight text-pine-900 sm:text-5xl lg:text-[4rem]">
                   Your band isn&apos;t luck.{" "}
                   <span className="relative inline-block text-emerald-600">
                     It&apos;s a plan.
-                    <svg aria-hidden viewBox="0 0 240 16" className="absolute -bottom-2 left-0 w-full text-gold-400" preserveAspectRatio="none">
+                    <svg aria-hidden viewBox="0 0 240 16" className="absolute -bottom-3 left-0 w-full text-gold-400" preserveAspectRatio="none">
                       <path d="M3 11c56-9 164-11 234-5" stroke="currentColor" strokeWidth="6" fill="none" strokeLinecap="round" />
                     </svg>
                   </span>

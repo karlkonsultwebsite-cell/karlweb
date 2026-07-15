@@ -36,7 +36,7 @@ export default function BlogPage() {
                 <Sparkle size={15} weight="fill" className="text-gold-500" />
                 Guides &amp; insights
               </span>
-              <h1 className="mt-6 font-display text-[2.4rem] font-bold leading-[1.04] tracking-tight text-pine-900 sm:text-5xl lg:text-[3.9rem]">
+              <h1 className="mt-6 font-display text-[2.4rem] font-bold leading-[1.14] tracking-tight text-pine-900 sm:text-5xl lg:text-[3.9rem]">
                 Study abroad, <span className="text-emerald-600">explained clearly</span>
               </h1>
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-pine-700">

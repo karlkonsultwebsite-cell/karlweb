@@ -11,7 +11,7 @@ export function Counselling() {
           <div className="pointer-events-none absolute -bottom-20 left-10 h-72 w-72 rounded-full bg-gold-400/20 blur-3xl" />
           <div className="relative grid items-center gap-10 p-8 sm:p-12 lg:grid-cols-2 lg:gap-16 lg:p-16">
             <Reveal>
-              <h2 className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-white md:text-[3.25rem]">
+              <h2 className="font-display text-4xl font-bold leading-[1.14] tracking-tight text-white md:text-[3.25rem]">
                 Book a free counselling session
               </h2>
               <p className="mt-5 max-w-md text-lg leading-relaxed text-white/85">

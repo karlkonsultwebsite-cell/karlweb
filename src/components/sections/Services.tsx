@@ -87,7 +87,7 @@ export function Services() {
           <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-emerald-700 ring-1 ring-emerald-100">
             Our services
           </span>
-          <h2 className="mt-5 font-display text-[2rem] font-bold leading-[1.08] tracking-tight text-pine-900 sm:text-4xl md:text-[3.4rem]">
+          <h2 className="mt-5 font-display text-[2rem] font-bold leading-[1.15] tracking-tight text-pine-900 sm:text-4xl md:text-[3.4rem]">
             Everything you need, in{" "}
             <span className="text-emerald-600">one place</span>
           </h2>

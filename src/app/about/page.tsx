@@ -90,7 +90,7 @@ export default function AboutPage() {
                 <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-emerald-700 shadow-sm ring-1 ring-emerald-100">
                   About Karl Konsult
                 </span>
-                <h1 className="mt-6 font-display text-[2.4rem] font-bold leading-[1.04] tracking-tight text-pine-900 sm:text-5xl lg:text-[4.25rem]">
+                <h1 className="mt-6 font-display text-[2.4rem] font-bold leading-[1.14] tracking-tight text-pine-900 sm:text-5xl lg:text-[4.25rem]">
                   Your study abroad
                   <br />
                   partner,{" "}
@@ -99,7 +99,7 @@ export default function AboutPage() {
                     <svg
                       aria-hidden
                       viewBox="0 0 220 16"
-                      className="absolute -bottom-2 left-0 w-full text-gold-400"
+                      className="absolute -bottom-3 left-0 w-full text-gold-400"
                       preserveAspectRatio="none"
                     >
                       <path d="M3 11c52-9 150-11 214-5" stroke="currentColor" strokeWidth="6" fill="none" strokeLinecap="round" />
@@ -139,8 +139,8 @@ export default function AboutPage() {
                   <Heart size={20} weight="fill" />
                 </span>
                 <div className="leading-tight">
-                  <p className="font-display text-lg font-bold text-pine-900">4.9/5</p>
-                  <p className="text-xs text-pine-700/60">loved by students</p>
+                  <p className="font-display text-lg font-bold text-pine-900">Student-first</p>
+                  <p className="text-xs text-pine-700/60">honest guidance, always</p>
                 </div>
               </div>
             </Reveal>

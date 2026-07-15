@@ -68,7 +68,7 @@ export function Universities() {
             <span className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-4 py-1.5 text-sm font-semibold text-emerald-700">
               Top universities
             </span>
-            <h2 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight text-pine-900 md:text-[3rem]">
+            <h2 className="mt-4 font-display text-4xl font-bold leading-[1.14] tracking-tight text-pine-900 md:text-[3rem]">
               Get into world-ranked universities
             </h2>
             <p className="mt-5 max-w-md text-lg text-pine-700/75">

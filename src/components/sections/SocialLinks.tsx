@@ -17,7 +17,7 @@ export function SocialLinks() {
     <section id="social" className="bg-white py-14 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center">
-          <h2 className="mx-auto max-w-2xl font-display text-4xl font-bold leading-[1.05] tracking-tight text-pine-900 md:text-[3rem]">
+          <h2 className="mx-auto max-w-2xl font-display text-4xl font-bold leading-[1.14] tracking-tight text-pine-900 md:text-[3rem]">
             Follow our students&apos; journeys
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-pine-700/75">

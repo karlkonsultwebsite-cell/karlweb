@@ -150,11 +150,11 @@ export default function ScholarshipsPage() {
                 <Sparkle size={15} weight="fill" className="text-gold-500" />
                 Scholarship assistance
               </span>
-              <h1 className="mx-auto mt-6 max-w-3xl font-display text-[2.3rem] font-bold leading-[1.05] tracking-tight text-pine-900 sm:text-5xl lg:text-[3.7rem]">
+              <h1 className="mx-auto mt-6 max-w-3xl font-display text-[2.3rem] font-bold leading-[1.14] tracking-tight text-pine-900 sm:text-5xl lg:text-[3.7rem]">
                 Scholarships that make studying abroad{" "}
                 <span className="relative inline-block text-emerald-600">
                   affordable
-                  <svg aria-hidden viewBox="0 0 240 16" className="absolute -bottom-2 left-0 w-full text-gold-400" preserveAspectRatio="none">
+                  <svg aria-hidden viewBox="0 0 240 16" className="absolute -bottom-3 left-0 w-full text-gold-400" preserveAspectRatio="none">
                     <path d="M3 11c56-9 164-11 234-5" stroke="currentColor" strokeWidth="6" fill="none" strokeLinecap="round" />
                   </svg>
                 </span>

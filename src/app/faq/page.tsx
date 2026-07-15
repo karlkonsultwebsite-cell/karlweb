@@ -165,11 +165,11 @@ export default function FaqPage() {
                 <Question size={15} weight="fill" className="text-emerald-600" />
                 Help centre · FAQ
               </span>
-              <h1 className="mx-auto mt-6 max-w-3xl font-display text-[2.4rem] font-bold leading-[1.04] tracking-tight text-pine-900 sm:text-5xl lg:text-[3.8rem]">
+              <h1 className="mx-auto mt-6 max-w-3xl font-display text-[2.4rem] font-bold leading-[1.14] tracking-tight text-pine-900 sm:text-5xl lg:text-[3.8rem]">
                 Your study abroad questions,{" "}
                 <span className="relative inline-block text-emerald-600">
                   answered
-                  <svg aria-hidden viewBox="0 0 200 16" className="absolute -bottom-2 left-0 w-full text-gold-400" preserveAspectRatio="none">
+                  <svg aria-hidden viewBox="0 0 200 16" className="absolute -bottom-3 left-0 w-full text-gold-400" preserveAspectRatio="none">
                     <path d="M3 11c48-9 140-11 194-5" stroke="currentColor" strokeWidth="6" fill="none" strokeLinecap="round" />
                   </svg>
                 </span>

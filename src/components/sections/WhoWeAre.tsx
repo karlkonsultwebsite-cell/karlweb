@@ -21,7 +21,7 @@ export function WhoWeAre() {
             <span className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-4 py-1.5 text-sm font-semibold text-emerald-700">
               Who we are
             </span>
-            <h2 className="mt-4 font-display text-[2rem] font-bold leading-[1.08] tracking-tight text-pine-900 sm:text-4xl md:text-[3rem]">
+            <h2 className="mt-4 font-display text-[2rem] font-bold leading-[1.15] tracking-tight text-pine-900 sm:text-4xl md:text-[3rem]">
               Your trusted study abroad partners
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-pine-700/85">

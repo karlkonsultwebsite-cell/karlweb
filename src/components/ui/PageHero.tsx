@@ -27,7 +27,7 @@ export function PageHero({
         <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-emerald-700 ring-1 ring-emerald-100">
           {eyebrow}
         </span>
-        <h1 className="mx-auto mt-5 max-w-3xl font-display text-[2.2rem] font-bold leading-[1.06] tracking-tight text-pine-900 sm:text-5xl lg:text-6xl">
+        <h1 className="mx-auto mt-5 max-w-3xl font-display text-[2.2rem] font-bold leading-[1.14] tracking-tight text-pine-900 sm:text-5xl lg:text-6xl">
           {title} {highlight && <span className="text-emerald-600">{highlight}</span>}
         </h1>
         <p className="mx-auto mt-5 max-w-xl text-lg text-pine-700/80">{subtitle}</p>

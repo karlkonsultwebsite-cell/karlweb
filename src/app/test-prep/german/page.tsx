@@ -66,11 +66,11 @@ export default function GermanPage() {
                   <Sparkle size={15} weight="fill" className="text-gold-500" />
                   German · A1 to C1
                 </span>
-                <h1 className="mt-6 font-display text-[2.4rem] font-bold leading-[1.04] tracking-tight text-pine-900 sm:text-5xl lg:text-[4rem]">
+                <h1 className="mt-6 font-display text-[2.4rem] font-bold leading-[1.14] tracking-tight text-pine-900 sm:text-5xl lg:text-[4rem]">
                   From <em className="not-italic text-gold-500">Hallo</em> to{" "}
                   <span className="relative inline-block text-gold-500">
                     Germany.
-                    <svg aria-hidden viewBox="0 0 200 16" className="absolute -bottom-2 left-0 w-full text-emerald-400" preserveAspectRatio="none">
+                    <svg aria-hidden viewBox="0 0 200 16" className="absolute -bottom-3 left-0 w-full text-emerald-400" preserveAspectRatio="none">
                       <path d="M3 11c48-9 140-11 194-5" stroke="currentColor" strokeWidth="6" fill="none" strokeLinecap="round" />
                     </svg>
                   </span>

@@ -75,14 +75,9 @@ export function CountryPage({
                   <Flag code={dest.code} className="h-4 w-6" />
                   {detail.tagline}
                 </span>
-                <h1 className="mt-6 font-display text-[2.1rem] font-bold leading-[1.06] tracking-tight text-pine-900 sm:text-5xl lg:text-[3.7rem]">
-                  {dest.name}:{" "}
-                  <span className="relative inline-block text-emerald-600">
-                    {detail.headline}
-                    <svg aria-hidden viewBox="0 0 240 16" className="absolute -bottom-2 left-0 w-full text-gold-400" preserveAspectRatio="none">
-                      <path d="M3 11c56-9 164-11 234-5" stroke="currentColor" strokeWidth="6" fill="none" strokeLinecap="round" />
-                    </svg>
-                  </span>
+                <h1 className="mt-6 font-display text-[2.1rem] font-bold leading-[1.2] tracking-tight text-pine-900 sm:text-5xl lg:text-[3.5rem]">
+                  <span className="block">Study in {dest.name}</span>
+                  <span className="mt-1 block text-emerald-600">{detail.headline}</span>
                 </h1>
                 <p className="mt-6 max-w-[48ch] text-lg leading-relaxed text-pine-700">{detail.intro}</p>
                 <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">

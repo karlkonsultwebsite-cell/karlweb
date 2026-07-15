@@ -64,8 +64,8 @@ const perks = [
 const stats = [
   { value: "40+", label: "Team members" },
   { value: "5,000+", label: "Students guided" },
-  { value: "15+", label: "Countries served" },
-  { value: "4.9★", label: "Team-rated culture" },
+  { value: "9", label: "Study destinations" },
+  { value: "250+", label: "Partner universities" },
 ];
 
 type Job = {
@@ -128,11 +128,11 @@ export default function CareersPage() {
                 <Sparkle size={15} weight="fill" className="text-gold-500" />
                 Careers · We&apos;re hiring
               </span>
-              <h1 className="mt-6 font-display text-[2.2rem] font-bold leading-[1.05] tracking-tight text-pine-900 sm:text-5xl lg:text-[3.9rem]">
+              <h1 className="mt-6 font-display text-[2.2rem] font-bold leading-[1.14] tracking-tight text-pine-900 sm:text-5xl lg:text-[3.9rem]">
                 Help students{" "}
                 <span className="relative inline-block text-emerald-600">
                   change their lives
-                  <svg aria-hidden viewBox="0 0 240 16" className="absolute -bottom-2 left-0 w-full text-gold-400" preserveAspectRatio="none">
+                  <svg aria-hidden viewBox="0 0 240 16" className="absolute -bottom-3 left-0 w-full text-gold-400" preserveAspectRatio="none">
                     <path d="M3 11c56-9 164-11 234-5" stroke="currentColor" strokeWidth="6" fill="none" strokeLinecap="round" />
                   </svg>
                 </span>

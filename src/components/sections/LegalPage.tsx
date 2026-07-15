@@ -39,7 +39,7 @@ export function LegalPage({ title, updated, intro, sections }: LegalPageProps) {
               <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-emerald-700 shadow-sm ring-1 ring-emerald-100">
                 Legal
               </span>
-              <h1 className="mt-5 font-display text-[2rem] font-bold leading-[1.08] tracking-tight text-pine-900 sm:text-4xl lg:text-5xl">
+              <h1 className="mt-5 font-display text-[2rem] font-bold leading-[1.15] tracking-tight text-pine-900 sm:text-4xl lg:text-5xl">
                 {title}
               </h1>
               <p className="mt-4 text-sm font-medium text-pine-700/70">

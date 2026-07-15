@@ -38,7 +38,7 @@ export function WhyUs() {
             <span className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-4 py-1.5 text-sm font-semibold text-emerald-700">
               Why Karl Konsult International?
             </span>
-            <h2 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight text-pine-900 md:text-[2.95rem]">
+            <h2 className="mt-4 font-display text-4xl font-bold leading-[1.14] tracking-tight text-pine-900 md:text-[2.95rem]">
               Honest guidance that puts your success first
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-pine-700/85">
