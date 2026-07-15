@@ -40,8 +40,11 @@ Note: the old clay illustrations `public/{hero,who_we_are,universities,ielts-her
   are placeholders) for each country. Add the actual universities you place students at.
   These fields drive both the homepage MBBS section AND the `/mbbs-abroad` page. The page
   also states NEET/eligibility rules and FMGE/NExT — confirm wording with your team.
-- **Stats** used across the site (5,000+ students, 98% visa success, 16 yrs, 250+
-  universities, 4.9/5) — confirm these are accurate and defensible.
+- **Stats** used across the site (5,000+ students placed, 98% visa success, 250+ partner
+  universities, 9 study destinations, 40+ team members) — confirm each is accurate and
+  defensible. Note: per client feedback, all "since 2009" / "16 years" claims and all
+  star-rating / review-count claims have been removed sitewide — do not reintroduce them
+  without real, verifiable data.
 - **Blog posts** (`src/lib/blog.ts` → `blogPosts`) — the 6 sample articles are realistic
   placeholders. Replace with the client's real posts (or wire to a CMS). They drive both
   the homepage Insights teaser AND the `/blog` + `/blog/[slug]` pages.
@@ -49,6 +52,31 @@ Note: the old clay illustrations `public/{hero,who_we_are,universities,ielts-her
   pages use indicative **tuition, living costs, work rights, intakes, popular courses and
   top universities**. These are realistic but must be VERIFIED against current official
   sources before quoting to students. All figures are marked indicative on the pages.
+
+### ⚠️ 2a. Deep country + intake content — FACT-CHECK REQUIRED (highest priority)
+
+`src/lib/content/*.ts` (one file per country) holds the long-form content for the deep
+country pages **and** every `/study-abroad/[country]/[intake]` landing page. This content
+was written to the client-approved structure and reads as authoritative — but **none of
+the specifics are verified**. Before launch, someone on the team must check, per country:
+
+| Claim type | Where | Risk if wrong |
+| --- | --- | --- |
+| **Intake months & seasons** | `intakes[].months`, `.season`, `.status` | Students plan around these |
+| **Application deadlines** | `intakes[].deadlines`, `.timeline` | Missed applications |
+| **University lists** | `universities[]`, `intakes[].universities[]` | Naming a uni that doesn't offer that intake |
+| **Tuition & living costs** | `tuitionCosts`, `livingCosts` | Budget/trust damage (shown as indicative, but still) |
+| **Eligibility rules** | `eligibility[]`, `englishTests` | Wrong advice on entry requirements |
+| **Documents required** | `documents[]` | Incomplete visa/application files |
+| **Scholarship schemes** | `scholarships`, `namedScholarships[]` | Schemes change/close yearly |
+| **Visa & work rights** | `visa`, `countryDetails[].workRights` | Legally sensitive — verify against official immigration sources |
+
+Country-specific items that especially need checking: **Germany** (blocked account amount,
+APS certificate), **China** (NEET requirement, NMC/WHO screening, JW202), **UK** (Graduate
+Route, three intakes), **Australia** (485 visa, fortnightly work hours), **USA** (OPT/STEM
+OPT duration), **Europe** (rules differ per country — the page treats it as a region).
+
+**Recommendation:** assign one counsellor per country to sign off their file before launch.
 - **Scholarships** (`src/app/scholarships/page.tsx`) — scheme names (Chevening/DAAD/CSC/DSU)
   are real but details change yearly; confirm before promoting specifics.
 - **Careers** (`src/app/careers/page.tsx`) — the 5 job postings are SAMPLE roles. Replace

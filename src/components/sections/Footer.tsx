@@ -3,8 +3,21 @@ import Link from "next/link";
 import { MapPin, Phone, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
 import { socialMeta, type SocialKey } from "@/components/ui/SocialIcons";
 import { destinations, languageCourses } from "@/lib/data";
+import { countryContent } from "@/lib/content";
 
 const studyLinks = destinations.map((d) => ({ label: `Study in ${d.name}`, href: `/study-abroad/${d.slug}` }));
+
+/** Popular intake landing pages — real internal links for SEO. */
+const intakeLinks = destinations
+  .filter((d) => d.popular)
+  .flatMap((d) => {
+    const intakes = countryContent[d.slug]?.intakes ?? [];
+    return intakes.slice(0, 2).map((i) => ({
+      label: `${i.name} in ${d.name}`,
+      href: `/study-abroad/${d.slug}/${i.slug}`,
+    }));
+  })
+  .slice(0, 8);
 
 const coachingLinks = [
   ...languageCourses.slice(0, 5).map((c) => ({ label: c.name, href: c.href ?? "#language-coaching" })),
@@ -96,10 +109,11 @@ export function Footer() {
 
         {/* second link row */}
         <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 border-t border-white/10 pt-10 sm:grid-cols-2 lg:grid-cols-4">
+          <LinkCol title="Popular Intakes" links={intakeLinks} />
           <LinkCol title="Company" links={companyLinks} />
           <LinkCol title="Legal" links={legalLinks} />
 
-          <div className="col-span-2 grid gap-5 sm:grid-cols-1 lg:col-span-2 lg:grid-cols-1">
+          <div className="col-span-2 grid gap-5 sm:grid-cols-1 lg:col-span-1 lg:grid-cols-1">
             <h3 className="text-sm font-bold uppercase tracking-wide text-gold-300">Get in touch</h3>
             <div className="space-y-3">
               <div className="flex items-start gap-3">

@@ -16,7 +16,7 @@ const ease = [0.16, 1, 0.3, 1] as const;
 const rail = [
   { value: "5,000+", label: "students placed" },
   { value: "98%", label: "visa success" },
-  { value: "16", label: "years guiding" },
+  { value: "250+", label: "partner universities" },
 ];
 
 const flagStrip = ["au", "gb", "us", "de", "fr", "nz"];

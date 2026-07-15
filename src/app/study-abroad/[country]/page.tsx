@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CountryPage } from "@/components/sections/CountryPage";
 import { destinations, countryDetails } from "@/lib/data";
+import { countryContent } from "@/lib/content";
 
 type Params = { country: string };
 
@@ -32,6 +33,7 @@ export default async function StudyAbroadCountryPage({
   const { country } = await params;
   const dest = destinations.find((d) => d.slug === country);
   const detail = dest ? countryDetails[dest.slug] : undefined;
-  if (!dest || !detail) notFound();
-  return <CountryPage dest={dest} detail={detail} />;
+  const content = dest ? countryContent[dest.slug] : undefined;
+  if (!dest || !detail || !content) notFound();
+  return <CountryPage dest={dest} detail={detail} content={content} />;
 }
