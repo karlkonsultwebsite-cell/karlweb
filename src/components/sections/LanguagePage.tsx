@@ -1,6 +1,5 @@
 import Image from "next/image";
 import {
-  Sparkle,
   ArrowRight,
   CheckCircle,
   ChatsCircle,
@@ -91,7 +90,6 @@ export function LanguagePage({ data }: { data: LanguagePageData }) {
             <div>
               <Reveal>
                 <span className={`inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold shadow-sm ring-1 ${a.ring} ${a.text}`}>
-                  <Sparkle size={15} weight="fill" className="text-gold-500" />
                   {data.tagline}
                 </span>
                 <h1 className="mt-6 font-display text-[2.2rem] font-bold leading-[1.14] tracking-tight text-pine-900 sm:text-5xl lg:text-[3.9rem]">

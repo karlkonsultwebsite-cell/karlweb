@@ -25,8 +25,8 @@ const countries = destinations; // single source of truth (9 destinations incl E
 type Col1 = { label: string; Icon: typeof MapPin; hasFlyout: boolean; href: string };
 
 const studyAbroadCols: Col1[] = [
-  { label: "Destinations", Icon: MapPin, hasFlyout: true, href: "#destinations" },
-  { label: "Universities", Icon: GraduationCap, hasFlyout: true, href: "#universities" },
+  { label: "Destinations", Icon: MapPin, hasFlyout: true, href: "/#destinations" },
+  { label: "Universities", Icon: GraduationCap, hasFlyout: true, href: "/universities" },
   { label: "MBBS Abroad", Icon: FirstAidKit, hasFlyout: false, href: "/mbbs-abroad" },
 ];
 
@@ -45,7 +45,6 @@ const simpleLinks = [
   { label: "About Us", href: "/about" },
   { label: "MBBS Abroad", href: "/mbbs-abroad" },
   { label: "Blog", href: "/blog" },
-  { label: "Careers", href: "/careers" },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -205,7 +204,7 @@ export function Navbar() {
 
           <div className="relative" onMouseEnter={() => setMenu("test")} onMouseLeave={() => setMenu(null)}>
             <button className="flex items-center gap-1 rounded-full px-4 py-2 text-[15px] font-medium text-pine-700 transition-colors hover:text-emerald-600">
-              Test Prep
+              Language Courses
               <CaretDown size={14} weight="bold" className={`transition-transform ${menu === "test" ? "rotate-180" : ""}`} />
             </button>
             <AnimatePresence>
@@ -255,7 +254,7 @@ export function Navbar() {
               )}
 
               <button className="flex items-center justify-between rounded-xl px-3 py-3 font-medium text-pine-700" onClick={() => setMobileSub((s) => (s === "test" ? null : "test"))}>
-                Test Prep
+                Language Courses
                 <CaretDown size={16} weight="bold" className={`transition-transform ${mobileSub === "test" ? "rotate-180" : ""}`} />
               </button>
               {mobileSub === "test" && (

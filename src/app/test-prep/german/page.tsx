@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import {
-  Sparkle,
   ArrowRight,
   CheckCircle,
   ChatsCircle,
@@ -63,7 +62,6 @@ export default function GermanPage() {
             <div>
               <Reveal>
                 <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-gold-500 shadow-sm ring-1 ring-gold-300/50">
-                  <Sparkle size={15} weight="fill" className="text-gold-500" />
                   German · A1 to C1
                 </span>
                 <h1 className="mt-6 font-display text-[2.4rem] font-bold leading-[1.14] tracking-tight text-pine-900 sm:text-5xl lg:text-[4rem]">

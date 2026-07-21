@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import {
-  Sparkle,
   ArrowRight,
   CheckCircle,
   Trophy,
@@ -147,7 +146,6 @@ export default function ScholarshipsPage() {
           <div className="mx-auto max-w-[900px] px-4 pb-16 pt-10 text-center sm:px-6 sm:pb-20 sm:pt-14 lg:px-8 lg:pb-24 lg:pt-16">
             <Reveal>
               <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-emerald-600 shadow-sm ring-1 ring-emerald-200/60">
-                <Sparkle size={15} weight="fill" className="text-gold-500" />
                 Scholarship assistance
               </span>
               <h1 className="mx-auto mt-6 max-w-3xl font-display text-[2.3rem] font-bold leading-[1.14] tracking-tight text-pine-900 sm:text-5xl lg:text-[3.7rem]">

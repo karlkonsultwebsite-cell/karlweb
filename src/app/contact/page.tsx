@@ -5,7 +5,6 @@ import {
   MapPin,
   Clock,
   WhatsappLogo,
-  Sparkle,
   CheckCircle,
 } from "@phosphor-icons/react/dist/ssr";
 import { Navbar } from "@/components/sections/Navbar";
@@ -71,7 +70,6 @@ export default function ContactPage() {
             <div className="lg:pt-6">
               <Reveal>
                 <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-emerald-700 shadow-sm ring-1 ring-emerald-100">
-                  <Sparkle size={15} weight="fill" className="text-gold-500" />
                   Contact us
                 </span>
                 <h1 className="mt-6 font-display text-[2.4rem] font-bold leading-[1.14] tracking-tight text-pine-900 sm:text-5xl lg:text-[4rem]">

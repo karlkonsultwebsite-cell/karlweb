@@ -66,7 +66,7 @@ const teamPhoto = (id: string) =>
 const team = [
   { name: "Rajeev Karl", role: "Founder & Lead Counsellor", img: teamPhoto("1560250097-0b93528c311a") },
   { name: "Meher Sodhi", role: "Visa & Documentation Head", img: teamPhoto("1573496359142-b8d87734a5a2") },
-  { name: "Aman Verma", role: "Test Prep Lead", img: teamPhoto("1519085360753-af0119f7cbe7") },
+  { name: "Aman Verma", role: "Language Courses Lead", img: teamPhoto("1519085360753-af0119f7cbe7") },
   { name: "Priya Nair", role: "University Relations", img: teamPhoto("1487412720507-e7ab37603c6f") },
 ];
 

@@ -21,7 +21,7 @@ export function LanguageCoaching() {
         <Reveal className="max-w-2xl">
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-semibold text-gold-300">
             <Translate size={15} weight="fill" />
-            Language coaching
+            Language Courses
           </span>
           <h2 className="mt-4 font-display text-4xl font-bold leading-[1.14] tracking-tight md:text-[3.25rem]">
             Score the band your offer needs

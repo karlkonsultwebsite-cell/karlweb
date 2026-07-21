@@ -33,7 +33,7 @@ const steps = [
   {
     n: "03",
     Icon: Exam,
-    title: "Test Preparation",
+    title: "Language Courses",
     desc: "IELTS, PTE, Duolingo and foreign-language coaching with mock tests and targeted feedback.",
   },
   {

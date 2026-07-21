@@ -26,17 +26,16 @@ const coachingLinks = [
 
 const exploreLinks = [
   { label: "Scholarships", href: "/scholarships" },
+  { label: "Universities", href: "/universities" },
   { label: "Country Guides", href: "/blog" },
   { label: "Visa Success Stories", href: "/#testimonials" },
   { label: "Blogs", href: "/blog" },
-  { label: "Careers", href: "/careers" },
   { label: "FAQ", href: "/faq" },
 ];
 
 const companyLinks = [
   { label: "About Us", href: "/about" },
   { label: "Why Karl Konsult", href: "/#why-us" },
-  { label: "Careers", href: "/careers" },
   { label: "Contact Us", href: "/contact" },
 ];
 

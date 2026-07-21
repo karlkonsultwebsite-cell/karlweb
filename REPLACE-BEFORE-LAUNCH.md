@@ -79,8 +79,10 @@ OPT duration), **Europe** (rules differ per country — the page treats it as a 
 **Recommendation:** assign one counsellor per country to sign off their file before launch.
 - **Scholarships** (`src/app/scholarships/page.tsx`) — scheme names (Chevening/DAAD/CSC/DSU)
   are real but details change yearly; confirm before promoting specifics.
-- **Careers** (`src/app/careers/page.tsx`) — the 5 job postings are SAMPLE roles. Replace
-  with your actual openings (or remove ones you're not hiring for).
+- **Universities** (`src/app/universities/page.tsx`) — the page groups universities by
+  country, pulled from `src/lib/content/*.ts` → `universities[]`. These are representative
+  institutions, not confirmed partners. Replace with your genuine partner list (and the
+  "250+ partner universities" stat) before launch.
 - **Legal pages** (`/privacy`, `/terms`, `/refund`, `/disclaimer` in `src/app/`) —
   ⚠️ **TEMPLATE TEXT ONLY. Have a lawyer review and adapt before launch.** Do not treat as
   final legal copy.

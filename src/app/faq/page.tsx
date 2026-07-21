@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import {
-  Sparkle,
   ArrowRight,
   Question,
   Compass,
@@ -123,7 +122,7 @@ const categories = [
   },
   {
     Icon: Books,
-    title: "Test prep & language",
+    title: "Language courses & test prep",
     items: [
       {
         q: "Do you offer IELTS and PTE coaching?",
@@ -233,7 +232,6 @@ export default function FaqPage() {
                   ))}
                 </ul>
                 <div className="relative flex items-center gap-2">
-                  <Sparkle size={20} weight="fill" className="text-gold-300" />
                   <span className="font-display text-sm font-bold uppercase tracking-wide text-gold-300">
                     Still have questions?
                   </span>
